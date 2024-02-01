@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=sharma0402
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=car_rental_db
+
+# version: '3.8'
+# services:
+#   mongodb:
+#     image: mongo:6-jammy
+#     ports:
+#       - '27017:27017'
+#     volumes:
+#       - dbdata6:/data/db
+# volumes:
+#   dbdata6:
